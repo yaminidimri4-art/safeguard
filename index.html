@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeGuard - Women Safety</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="brand">
+        <div class="shield">🛡️</div>
+        <div>
+            <h1>SafeGuard</h1>
+            <p>Women Safety & Emergency Portal</p>
+        </div>
+    </div>
+
+    <div class="login">
+        <input type="text" id="userId" placeholder="Enter User ID">
+        <button onclick="saveUserId()">Save ID</button>
+    </div>
+</header>
+
+
+<main>
+
+    <section class="intro">
+        <h4>WOMEN SAFETY DASHBOARD</h4>
+
+        <h2>Your <span>Safety</span>, One Tap Away.</h2>
+
+        <p>
+            Save your trusted emergency contacts, get your current
+            location and create an SOS emergency event.
+        </p>
+    </section>
+
+
+    <section class="sos-area">
+        <button id="sosButton" class="sos" onclick="startSOS()">
+            <div class="alarm">🚨</div>
+            <b id="sosText">SOS</b>
+            <small id="sosSubText">Emergency Alert</small>
+        </button>
+    </section>
+
+
+    <section class="features">
+
+        <h2>Safety Features</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🎙️</div>
+                <h3>Voice Option</h3>
+                <p>App version feature</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💗</div>
+                <h3>Human Heartbeat</h3>
+                <p>App version feature</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📳</div>
+                <h3>Shake-to-SOS</h3>
+                <p>Available in Android app</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📞</div>
+                <h3>Emergency Contacts</h3>
+                <p>Add trusted emergency numbers</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📍</div>
+                <h3>Live Location</h3>
+                <p>Get your current location</p>
+
+                <button class="location-btn" onclick="getLocation()">
+                    Detect Location
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛡️</div>
+                <h3>Safety Protection</h3>
+                <p>Quick emergency assistance</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="contacts">
+
+        <h2>Emergency Contacts</h2>
+
+        <div class="contact-form">
+
+            <input
+                type="text"
+                id="contactName"
+                placeholder="Contact Name"
+            >
+
+            <input
+                type="tel"
+                id="contactNumber"
+                placeholder="Contact Number"
+            >
+
+            <button onclick="saveContact()">
+                Save Contact
+            </button>
+
+        </div>
+
+
+        <div class="emergency">
+
+            <div>
+                👩 Women Safety
+                <strong>181</strong>
+            </div>
+
+            <div>
+                👮 Police Emergency
+                <strong>112</strong>
+            </div>
+
+        </div>
+
+
+        <div id="contactList"></div>
+
+        <div id="locationResult"></div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
